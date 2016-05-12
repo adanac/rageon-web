@@ -4,32 +4,17 @@
 <meta charset="UTF-8">
 	<title>rageon</title>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('.carousel').carousel({
-			interval : 2000
-		});
-
-		$('.carousel').carousel('cycle');
-		rePwLogin();
-	});
-	function rePwLogin(){
-		var hider=$("#rePwLogin").val();
-		if(hider!=null&&hider!=""){
-			toLogin();
-		}
-		var loginFlag = $("#loginFlag").val();
-		if(loginFlag!=null&&loginFlag!=""){
-			toAdmin();
-		}
-	}
+	
 </script>
 </head>
 
 <body>
 	<script>
 		var basePath = "${base}";// 根目录
+		var resRoot = "${resRoot}";
+		console.log(basePath)
+		console.log(resRoot)
 	</script>
-	basePath
 	hi,rageon
 </body>
 

@@ -6,11 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.adanac.tool.rageon.common.MmcAction;
+import com.adanac.tool.rageon.common.BaseAction;
 
 @Controller
 @RequestMapping(value = "/", produces = "text/html;charset=UTF-8")
-public class HomeAction extends MmcAction {
+public class HomeAction extends BaseAction {
 
 	@RequestMapping("/")
 	public String index(HttpServletRequest request, ModelMap model) {

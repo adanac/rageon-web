@@ -1,0 +1,23 @@
+
+/*------------------------------------------------------------------------------
+    Body
+------------------------------------------------------------------------------*/
+body {
+    font-family:"Open Sans", sans-serif, Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun
+}
+
+/*------------------------------------------------------------------------------
+    Headings
+    (headings, menu links, dropcap first letter, panel subtitle)
+------------------------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav.site_navigation ul.menu > li > a,
+.dropcap:first-letter,
+.panel_title span {
+    font-family:"Open Sans", sans-serif, Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun
+}

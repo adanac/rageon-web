@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.adanac.framework.log.MyLogger;
 import com.adanac.framework.log.MyLoggerFactory;
-import com.adanac.tool.rageon.common.MmcAction;
+import com.adanac.tool.rageon.common.BaseAction;
 
 /**
  * 登录controller
  */
 @Controller
 @RequestMapping(value = "loginController", produces = "text/html;charset=UTF-8")
-public class LoginController extends MmcAction {
+public class LoginController extends BaseAction {
 
 	private static final MyLogger log = MyLoggerFactory.getLogger(LoginController.class);
 

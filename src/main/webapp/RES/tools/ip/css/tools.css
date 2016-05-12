@@ -1,0 +1,88 @@
+.query_content{border:#86b356 1px solid;padding:10px;margin:10px auto;width: 100%;}
+.query_content dl{clear:both;padding:8px;border-bottom:#aaa 1px dotted;overflow:hidden;*zoom:1}
+.query_content dt{float:left;width:100%;font-size:14px;height:auto;color:#ff4907;font-weight:bold;margin-right:10px;}
+.query_content dd{float:left;width:100%;font-size:14px;padding-top:10px;}
+.query_content dd span{display:inline-block;font-size:20px;font-weight:bold;height:25px;color:#4b8400;}
+.query_content .date_text{float:right;height:25px;line-height:25px;color:#ff9000;margin-bottom:15px}
+
+.hotdomain{padding-top:10px;text-align:left;color:#999;}
+.hotdomain a{color:#2472df;margin:0 5px}
+.domain_task{width:80%;float:left;margin:10px auto;padding:6px 10px;text-align:left;color:#d29220;background:#fef8eb;border:1px solid #f0d6a3;word-break:break-all; word-wrap:break-word;border-radius:2px;box-shadow:0 1px 1px rgba(0,0,0,0.08)}
+.domain_task a{color:#d29220;}
+
+.widget .detail_table{width:98%;line-height:24px;word-break:break-all; word-wrap:break-word;}
+.widget .detail_table th,td{text-align:left}
+.widget .detail_table td{color:#ba2636}
+
+.domain_menu{background:url(../images/d_menu_bg.png) repeat-x 0 0;clear:both;display:block;height:35px;line-height:35px;font-size:14px;font-weight:bold;text-align:center;padding-left:3px}
+.domain_menu li{float:left;list-style: none}
+.domain_menu li a{display:inline-block;border-bottom:0;height:34px;margin:0 5px 0 7px;color:#717172;padding:0 16px}
+.domain_menu li a:visited,.domain_menu li a:hover{color:#717172}
+.domain_menu li.active a{border:1px solid #d9d9d9;border-bottom:0;height:34px;margin:0 5px 0 7px;color:#2b2b2b;background-color:#fff;line-height:33px;padding:0 15px}
+.domain_menu li.active a:visited,.grzx_menu li.active a:hover{color:#2b2b2b;text-decoration:none}
+.domain_menu li .vtcal_line{display:inline-block;height:14px;line-height:0;font-size:0;border:1px solid #ddd;border-width:0 1px;border-right-color:#fff}
+.domain_select{font-size:14px;padding:2px 0 2px 2px;margin-top:8px;}
+.domain_detail{clear:both;padding:10px 0 0}
+.domain_detail h2,.center_con dt{height:32px;line-height:32px;display:block;clear:both;padding:0 5px 0 10px}
+.domain_detail h2 strong{float:left;display:inline-block;font:normal 16px/32px "黑体";color:#2b2b2b;margin-right:10px}
+.domain_table{width:100%;border-collapse: collapse;	border:1px solid #ccc;word-break:break-all; word-wrap:break-word;}
+.domain_table th{background-color:#f5f5f5;line-height:24px;text-align:center;border:1px solid #ccc;}
+.domain_table td{padding:0 5px;height:46px;border:1px dashed #ccc;vertical-align:middle;}
+.domain_table td:hover{background: #e2f5dd;}
+.domain_table td.sdname{font-size:14px;color:#2b2b2b;padding-left:5px}
+.domain_table thead tr th:nth-child(odd){background-color: #a3d537}
+.domain_table thead tr th:nth-child(even){background-color: #8ec022}
+
+.applymd5{width:100%;padding:15px 5px 0px 10px;background:#fffbeb;border:#efdb8b 1px solid;font-size:14px}
+.applymd5 input{border-color:#efefef;}
+
+.cleft{float:left;width:60%;padding: 10px 0px 4px;color: #888;font-weight: normal;}
+.cright{float:left;width:40%;margin-top: 10px;text-align: right;color: #F00;}
+
+.scontent{width:100%;height:50px;}
+.sleft{float:left;width:70%;height:35px;}
+.sright{float:left;width:30%;padding-left:10px;}
+
+#whoisWrapper{
+	position: absolute;
+	z-index: 15;
+	top: 50%;
+	right: 50%;
+	width:672px;
+	height:462px;
+	margin-top: -231px;
+	margin-right: -336px;
+	display: none;
+	border: 5px solid #CCC;
+	border-radius: 5px;
+}
+#whoisWrapper #whoisTitle{
+	height: 35px;
+	color:#666666;
+	font:14px "Microsoft YaHei";
+	background: url(../images/div_title_bg.png) repeat-x 0 1px;
+	overflow: hidden;
+	border-bottom: 1px solid #CCC;
+	cursor: move;
+	margin-top: -1px;
+}
+#whoisWrapper #whoisTitle h3{float: left;margin: 7px 0 0 10px;}
+#whoisWrapper #whoisTitle a{
+	float:right;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: url(../images/close_div.png) no-repeat 5px 5px;
+	margin: 5px;
+}
+#whoisWrapper #whoisTitle a:hover{
+	background-color: #ededed;
+}
+#whoisWrapper .whoisContent{
+	width:662px;
+	height:417px;
+	border:1px solid #ccc;
+	background:#f2f2f2;
+	padding:5px;
+	overflow:auto;
+}
