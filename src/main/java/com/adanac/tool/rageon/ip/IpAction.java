@@ -65,4 +65,26 @@ public class IpAction extends BaseAction {
 		}
 		return baseResult;
 	}
+
+	@ResponseBody
+	@RequestMapping(value = "queryIp", method = RequestMethod.POST, produces = "application/json")
+	public BaseResult queryIp(HttpServletRequest request, Md5Dto md5Dto) {
+		String ip = request.getParameter("ip");
+		log.info("====queryIp====Ip:" + ip);
+		BaseResult baseResult = new BaseResult();
+		String[] res = new String[2];
+		try {
+			String inStr = md5Dto.getQuerymd5();
+			String oriPwd = MD5DecodeUtil.md5Decode(inStr);
+			res[0] = inStr;
+			res[1] = oriPwd;
+			baseResult.setContent(res);
+			baseResult.setStatus(BaseResult.SUCCESS);
+		} catch (Exception e) {
+			log.info("====queryIp====error{}" + e.getMessage());
+			baseResult.setContent(e.getMessage());
+			baseResult.setStatus(BaseResult.ERROR);
+		}
+		return baseResult;
+	}
 }
