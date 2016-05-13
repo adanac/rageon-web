@@ -1,3 +1,5 @@
+var basePath = "${base}";
+
 function DoConvert() {
 	var textareaLength = $("#ConvertContent").val().length;
 	if (textareaLength == 0) {
@@ -22,19 +24,20 @@ function DoConvert() {
 	});
 }
 function EncodeMD5() {
+	var data = $('#Encode_Md5_Form').serialize();
 	$.ajax({
 		type : "POST",
 		dataType : "json",
-		url : "md5_encode.html",
-		data : $('#Encode_Md5_Form').serialize(),
+		url : basePath + "/ip/md5Encode.do",
+		data : data,
 		success : function(json) {
-			if (json.result == "error") {
-				var div = "<dl><dt>" + json.msg + "</dt></dl>";
+			if (json.status == "0") {
+				var div = "<dl><dt>" + json.content + "</dt></dl>";
 				$("#Encode_MD5_Result").html(div);
 			} else {
-				var div = "<dl><dt>您的查询的MD5[" + json.mingwen
-						+ "]加密信息如下：</dt><dd><span>16位MD5：" + json.md5_16
-						+ "</span></dd><dd><span>32位MD5：" + json.md5_32
+				var div = "<dl><dt>您的查询的MD5[" + json.content[0]
+						+ "]加密信息如下：</dt><dd><span>16位MD5：" + json.content[1]
+						+ "</span></dd><dd><span>32位MD5：" + json.content[2]
 						+ "</span></dd></dl>";
 				$("#Encode_MD5_Result").html(div);
 			}
@@ -44,6 +47,7 @@ function EncodeMD5() {
 }
 
 function DecodeMD5() {
+	var data = $('#Decode_Md5_Form').serialize();
 	var querymd5 = document.decodemd5form.querymd5.value;
 	var md5type = document.decodemd5form.md5type.value;
 	var exp = /^([0-9A-Fa-f]+)$/;
@@ -56,15 +60,15 @@ function DecodeMD5() {
 		$.ajax({
 			type : "POST",
 			dataType : "json",
-			url : "md5_decode.html",
-			data : $('#Decode_Md5_Form').serialize(),
+			url : basePath + "/ip/md5Decode.do",
+			data : data,
 			success : function(json) {
-				if (json.result == "error") {
+				if (json.status == "0") {
 					var div = "<dl><dt>" + json.msg + "</dt></dl>";
 					$("#Decode_MD5_Result").html(div);
 				} else {
-					var div = "<dl><dt>您的查询的MD5[" + json.md5
-							+ "]解密信息如下：</dt><dd><span>明文为：" + json.mingwen
+					var div = "<dl><dt>您的查询的MD5[" + json.content[0]
+							+ "]解密信息如下：</dt><dd><span>明文为：" + json.content[1]
 							+ "</span></dd></dl>";
 					$("#Decode_MD5_Result").html(div);
 				}
@@ -74,37 +78,6 @@ function DecodeMD5() {
 	}
 }
 
-function applydiv(tabs, formhash) {
-	var html = '<div class="applymd5" id="applymd5"><form method="POST" action="md5_decode.html" name="applymd5form" id="applymd5form">提交MD5（明文）:  <input type="text" name="applymd5" value="" style="width: 55%;"/><input type="hidden" name="formhash" value="'
-			+ formhash
-			+ '" /> <input type="hidden" name="applymd5submit" value="apply"><a href="#" class="btn btn_Default" target="_self" style="background-color:#2ecc71; color:#ffffff;" onclick="javascript:ApplyMD5(\''
-			+ tabs + '\');">提交</a></form></div>';
-	$('#applymd5').remove();
-	if (tabs == 'tabs_3') {
-		$('#tabs_3').append(html);
-	} else if (tabs == 'tabs_4') {
-		$('#tabs_4').append(html);
-	}
-}
-
-function ApplyMD5(tabs) {
-	$.ajax({
-		type : "POST",
-		dataType : "json",
-		url : "md5_encode.html",
-		data : $('#applymd5form').serialize(),
-		success : function(json) {
-			var div = "<dl><dt>" + json.msg + "</dt></dl>";
-			if (tabs == 'tabs_3') {
-				$("#Decode_MD5_Result").html(div);
-				$("#Decode_MD5_Result").show();
-			} else if (tabs == 'tabs_4') {
-				$("#Encode_MD5_Result").html(div);
-				$("#Encode_MD5_Result").show();
-			}
-		}
-	});
-}
 
 function checkIP() {
 	var ip = document.ipform.queryip.value.replace(/(\s+)/g, "");

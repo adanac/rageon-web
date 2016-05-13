@@ -1,4 +1,4 @@
-package com.adanac.tool.rageon;
+package com.adanac.tool.rageon.login;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

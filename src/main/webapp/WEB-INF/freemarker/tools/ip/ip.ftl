@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="${resRoot }/tools/ip/css/typography.css">
     <link rel="stylesheet" href="${resRoot }/tools/ip/css/style.css">
     <link rel="stylesheet" href="${resRoot }/tools/ip/css/tools.css">
+    <link rel="stylesheet" href="${resRoot }/tools/ip/css/responsive-1200.css">
     
     <#include "../../common/head.ftl">
 
@@ -46,10 +47,9 @@
      <div class="sright"><input type="submit" name="queryipsubmit" class="search-btn" value="查询"></div>
             <input type="hidden" id="queryipdomain" name="queryipdomain" value="0" />
         </form></div>
-                           <div class="query_content">
-     	  	<dl>
- 	  	 	  	  <dt>Error:域名不符合规范！</dt>
- 	  	        <div style="clear:both;overflow:hidden;height:0;width:0;"></div>
+     <div class="query_content" style="display:none">
+     	<dl><dt>Error:域名不符合规范！</dt></dl>
+ 	  	<div style="clear:both;overflow:hidden;height:0;width:0;"></div>
     </div>
      </div>
 <div id="tabs_2">
@@ -61,7 +61,7 @@
   </div>
 <div id="tabs_3">
 <div class="scontent"><form method="POST" action="" name="decodemd5form"  id="Decode_Md5_Form">
-    <div class="sleft"><input type="text" name="querymd5" value="" autocomplete="off" maxlength="100"></div>
+    <div class="sleft"><input type="text" id="querymd5" name="querymd5" autocomplete="off" maxlength="100"></div>
     <input type="hidden" name="md5type" value="decode" />
     <input type="hidden" name="formhash" value="5c93b841" />
     <input type="hidden" name="querymd5submit" value="decode">
