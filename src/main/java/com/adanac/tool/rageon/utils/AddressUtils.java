@@ -214,6 +214,7 @@ public class AddressUtils {
 		System.out.println("==========");
 		String s = new String("\u4e2d\u56fd\u5e7f\u4e1c\u5e7f\u5dde");
 		System.out.println(s);
+		System.out.println("\u4e2d\u56fd\u5e7f\u4e1c\u5e7f\u5dde");
 		// 输出结果为：广东省,广州市,越秀区
 	}
 }

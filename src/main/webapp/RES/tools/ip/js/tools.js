@@ -79,49 +79,39 @@ function DecodeMD5() {
 }
 
 function QueryIp() {
-	var data = $('#Decode_Md5_Form').serialize();
-	var querymd5 = document.decodemd5form.querymd5.value;
-	var md5type = document.decodemd5form.md5type.value;
-	var exp = /^([0-9A-Fa-f]+)$/;
-	var reg = querymd5.match(exp);
-	if (md5type == 'decode'
-			&& ((querymd5.length != 16 && querymd5.length != 32) || reg == null)) {
-		alert("MD5密文不正确");
-		return false;
-	} else {
+	var ip = $("#queryip").val();
+	if (checkIP(ip)) {
 		$.ajax({
 			type : "POST",
 			dataType : "json",
-			url : basePath + "/ip/md5Decode.do",
-			data : data,
+			url : basePath + "/ip/queryIp.do?ip=" + ip,
 			success : function(json) {
 				if (json.status == "0") {
 					var div = "<dl><dt>" + json.msg + "</dt></dl>";
-					$("#Decode_MD5_Result").html(div);
+					$("#Query_Ip_Result").html(div);
 				} else {
-					var div = "<dl><dt>您的查询的MD5[" + json.content[0]
-							+ "]解密信息如下：</dt><dd><span>明文为：" + json.content[1]
+					var div = "<dl><dt>您的查询的Ip[" + json.content[0]
+							+ "]信息如下：</dt><dd><span>" + json.content[1]
 							+ "</span></dd></dl>";
-					$("#Decode_MD5_Result").html(div);
+					$("#Query_Ip_Result").html(div);
 				}
-				$("#Decode_MD5_Result").show();
+				$("#Query_Ip_Result").show();
 			}
 		});
 	}
 }
 
-
-function checkIP() {
-	var ip = document.ipform.queryip.value.replace(/(\s+)/g, "");
-	document.ipform.queryip.value = ip;
+function checkIP(ip0) {
+	var ip = ip0.replace(/(\s+)/g, "");
+	$("#queryip").val(ip);
 	var exp1 = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;
 	var reg1 = ip.match(exp1);
-	var exp2 = /^([0-9A-Za-z\-\.]+)$/;
-	var reg2 = ip.match(exp2);
-	if (reg1 == null && reg2 == null) {
-		alert("IP or 域名地址不合法！");
-		document.ipform.queryip.focus();
+	if (reg1 == null) {
+		alert("IP地址不合法！");
+		$("#queryip").focus();
 		return false;
+	} else {
+		return true;
 	}
 }
 

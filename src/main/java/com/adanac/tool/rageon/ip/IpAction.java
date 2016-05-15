@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
 import com.adanac.tool.rageon.intf.ip.service.Md5Dto;
+import com.adanac.tool.rageon.utils.IpAddressUtil;
 import com.adanac.tool.rageon.utils.MD5DecodeUtil;
 import com.adanac.tool.rageon.utils.MD5Util;
 
@@ -68,16 +69,15 @@ public class IpAction extends BaseAction {
 
 	@ResponseBody
 	@RequestMapping(value = "queryIp", method = RequestMethod.POST, produces = "application/json")
-	public BaseResult queryIp(HttpServletRequest request, Md5Dto md5Dto) {
+	public BaseResult queryIp(HttpServletRequest request) {
 		String ip = request.getParameter("ip");
 		log.info("====queryIp====Ip:" + ip);
 		BaseResult baseResult = new BaseResult();
 		String[] res = new String[2];
 		try {
-			String inStr = md5Dto.getQuerymd5();
-			String oriPwd = MD5DecodeUtil.md5Decode(inStr);
-			res[0] = inStr;
-			res[1] = oriPwd;
+			String ipAddress = IpAddressUtil.getAddressByIp(ip);
+			res[0] = ip;
+			res[1] = ipAddress;
 			baseResult.setContent(res);
 			baseResult.setStatus(BaseResult.SUCCESS);
 		} catch (Exception e) {

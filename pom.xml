@@ -11,19 +11,6 @@
 	<packaging>war</packaging>
 	<name>rageon-web</name>
  	<dependencies>
-		
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jsp-api</artifactId>
-		</dependency>
  		
 		<dependency>
 			<groupId>commons-fileupload</groupId>

@@ -7,12 +7,15 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import com.adanac.tool.rageon.constant.RageonConstant;
+
 import net.sf.json.JSONObject;
 
-public class GetAddressByIp {
+public class IpAddressUtil {
 
 	public static void main(String[] args) {
-		System.out.println(GetAddressByIp("125.70.11.136"));
+		System.out.println(IpAddressUtil.getAddressByIp("125.70.11.136"));
+		System.out.println("\u56db\u5ddd\u7701");
 	}
 
 	/**
@@ -20,7 +23,7 @@ public class GetAddressByIp {
 	 * @param IP
 	 * @return
 	 */
-	public static String GetAddressByIp(String IP) {
+	public static String getAddressByIp(String IP) {
 		String resout = "";
 		try {
 			String str = getJsonContent("http://ip.taobao.com/service/getIpInfo.php?ip=" + IP);
@@ -28,11 +31,10 @@ public class GetAddressByIp {
 
 			JSONObject obj = JSONObject.fromObject(str);
 			JSONObject obj2 = (JSONObject) obj.get("data");
-			String code = (String) obj.get("code");
-			if (code.equals("0")) {
-
-				resout = obj2.get("country") + "--" + obj2.get("area") + "--" + obj2.get("city") + "--"
-						+ obj2.get("isp");
+			Integer code = (Integer) obj.get("code");
+			if (code == RageonConstant.NUM_0) {
+				resout = obj2.get("country") + "--" + obj2.get("area") + "--" + obj2.get("region") + obj2.get("city")
+						+ "--" + obj2.get("isp");
 			} else {
 				resout = "IP地址有误";
 			}
@@ -50,7 +52,7 @@ public class GetAddressByIp {
 			URL url = new URL(urlStr);
 			HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
 			// 设置连接属性
-			httpConn.setConnectTimeout(3000);
+			httpConn.setConnectTimeout(6000);
 			httpConn.setDoInput(true);
 			httpConn.setRequestMethod("GET");
 			// 获取相应码

@@ -42,6 +42,11 @@
 .scontent{width:100%;height:50px;}
 .sleft{float:left;width:70%;height:35px;}
 .sright{float:left;width:30%;padding-left:10px;}
+.search-btn{
+	background-color:#f85050;
+	color: #fff;
+    width: auto;
+    }
 
 #whoisWrapper{
 	position: absolute;

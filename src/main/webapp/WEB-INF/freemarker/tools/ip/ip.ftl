@@ -41,17 +41,18 @@
 <li><a href="#tabs_4"><i class="fa fa-stop"></i>&nbsp;MD5加密</a></li>
 <li><a href="#tabs_5"><i class="fa fa-reply-all"></i>&nbsp;字符串转换</a></li></ul>
 <div class="active" id="tabs_1">
-<div class="scontent"><form method="POST"  action="ip.html" name="ipform" class="search-form" onsubmit="return checkIP()">
-     <div class="sleft"><input type="text" name="queryip"  class="input-search" value="" autocomplete="off"></div>
-            <input type="hidden" name="formhash" value="5c93b841" />
-     <div class="sright"><input type="submit" name="queryipsubmit" class="search-btn" value="查询"></div>
-            <input type="hidden" id="queryipdomain" name="queryipdomain" value="0" />
-        </form></div>
+	<div class="scontent">
+	     <div class="sleft">
+	     	<input type="text" id="queryip" name="queryip"  class="input-search" value="" autocomplete="off"></div>
+	     <div class="sright"><input type="button" id="queryIpBtn" name="queryipbutton" class="search-btn" value="查询"></div>
+	</div>
+	 <div class="query_content" id="Query_Ip_Result" style="display:none"></div>
      <div class="query_content" style="display:none">
      	<dl><dt>Error:域名不符合规范！</dt></dl>
  	  	<div style="clear:both;overflow:hidden;height:0;width:0;"></div>
     </div>
      </div>
+     
 <div id="tabs_2">
 <div class="scontent"><form method="POST"  action="domain.html">
      <div class="sleft"><input type="text" name="domain"  class="input-search" value="" autocomplete="off"></div>
@@ -265,6 +266,11 @@
 <script src="${resRoot}/tools/ip/js/tools.js" type="text/javascript"></script>
 
 <script type="text/javascript">
+	$(function(){
+		$("#queryIpBtn").click(function(){
+			QueryIp();
+		});
+	});
 </script>
 </html>
 
