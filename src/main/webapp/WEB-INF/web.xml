@@ -12,9 +12,9 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-		<!-- ,
 		classpath:conf/spring/spring-impl.xml,
 		classpath:conf/spring/spring-res.xml
+		<!-- ,
 		classpath:conf/spring/spring-dubbo.xml,	   
 		classpath:conf/spring/spring-user.xml,
 		classpath:conf/spring/spring-cache.xml -->

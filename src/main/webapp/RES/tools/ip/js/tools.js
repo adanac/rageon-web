@@ -159,3 +159,29 @@ function packeddecode(codestr) {
 	code = code.replace(/^eval/, '');
 	$("#ConvertContent").val(eval(code));
 }
+
+function QueryWeather() {
+	var city = $("#queryTq").val();
+	$.ajax({
+		type : "POST",
+		dataType : "json",
+		url : basePath + "/tq/queryWeather.do?city=" + city,
+		success : function(json) {
+			if (json.status == "0") {
+				var div = "<dl><dt>" + json.msg + "</dt></dl>";
+				$("#Query_Tq_Result").html(div);
+			} else {
+				var div = "<dl><dt>您的查询的[" + json.content.city
+						+ "]的天气信息如下：</dt><dd><span>" 
+						+ "白天:"+json.content.status1+"\t"
+						+"夜间:"+json.content.status2+"\t"
+				+"最高气温:"+json.content.temperature1+"\t"
+				+"最低气温:"+json.content.temperature2
+						+ "</span></dd></dl>";
+				$("#Query_Tq_Result").html(div);
+			}
+			$("#Query_Tq_Result").show();
+		}
+	});
+}
+

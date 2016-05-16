@@ -33,18 +33,32 @@
 <div class="col main-content col_9_of_12">
 
             <ul class="breadcrumb"><li><a href="/">T00ls首页</a></li> <li>IP地址查询,IP whois信息查询,IP域名反查</li></ul>
+            <ul class="breadcrumb">
+            	<iframe name="sinaWeatherTool" src="http://weather.news.sina.com.cn/chajian/iframe/weatherStyle32.html?city=%E5%8D%97%E4%BA%AC" width="166" height="152" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+            </ul>
 <div class="head_title"><h2>T00ls在线工具</h2></div>
 <div class="tab_content"><ul class="clearfix">
-<li class="ui-tabs-active ui-state-active"><a href="#tabs_1"><i class="fa fa-search"></i>&nbsp;IP查询</a></li>
+<li class="ui-tabs-active ui-state-active">
+<a href="#tabs_0"><i class="fa fa-search"></i>&nbsp;天气查询</a></li>
+<li><a href="#tabs_1"><i class="fa fa-search"></i>&nbsp;IP查询</a></li>
 <li><a href="#tabs_2"><i class="fa fa-search"></i>&nbsp;域名查询</a></li>
 <li><a href="#tabs_3"><i class="fa fa-stop"></i>&nbsp;MD5解密</a></li>
 <li><a href="#tabs_4"><i class="fa fa-stop"></i>&nbsp;MD5加密</a></li>
 <li><a href="#tabs_5"><i class="fa fa-reply-all"></i>&nbsp;字符串转换</a></li></ul>
-<div class="active" id="tabs_1">
+
+	<div class="active" id="tabs_0">
+		<div class="scontent">
+		     <div class="sleft"><input type="text" id="queryTq" name="queryTq"  class="input-search" value="" placeholder="南京" autocomplete="off"></div>
+		     <div class="sright"><input type="button" id="queryTqBtn" class="search-btn" value="查询天气"></div>
+		</div>
+		<div class="query_content" id="Query_Tq_Result" style="display:none"></div>
+	</div>
+
+<div id="tabs_1">
 	<div class="scontent">
 	     <div class="sleft">
 	     	<input type="text" id="queryip" name="queryip"  class="input-search" value="" autocomplete="off"></div>
-	     <div class="sright"><input type="button" id="queryIpBtn" name="queryipbutton" class="search-btn" value="查询"></div>
+	     <div class="sright"><input type="button" id="queryIpBtn" name="queryipbutton" class="search-btn" value="查询IP"></div>
 	</div>
 	 <div class="query_content" id="Query_Ip_Result" style="display:none"></div>
      <div class="query_content" style="display:none">
@@ -269,6 +283,9 @@
 	$(function(){
 		$("#queryIpBtn").click(function(){
 			QueryIp();
+		});
+		$("#queryTqBtn").click(function(){
+			QueryWeather();
 		});
 	});
 </script>

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.ip.service.Md5Dto;
+import com.adanac.tool.rageon.intf.ip.entity.Md5Dto;
 import com.adanac.tool.rageon.utils.IpAddressUtil;
 import com.adanac.tool.rageon.utils.MD5DecodeUtil;
 import com.adanac.tool.rageon.utils.MD5Util;
@@ -87,4 +87,26 @@ public class IpAction extends BaseAction {
 		}
 		return baseResult;
 	}
+
+	@ResponseBody
+	@RequestMapping(value = "queryDomain", method = RequestMethod.POST, produces = "application/json")
+	public BaseResult queryDomain(HttpServletRequest request) {
+		String domain = request.getParameter("domain");
+		log.info("====queryDomain====domain:" + domain);
+		BaseResult baseResult = new BaseResult();
+		String[] res = new String[2];
+		try {
+			String ipAddress = IpAddressUtil.getAddressByIp(domain);
+			res[0] = domain;
+			res[1] = ipAddress;
+			baseResult.setContent(res);
+			baseResult.setStatus(BaseResult.SUCCESS);
+		} catch (Exception e) {
+			log.info("====queryDomain====error{}" + e.getMessage());
+			baseResult.setContent(e.getMessage());
+			baseResult.setStatus(BaseResult.ERROR);
+		}
+		return baseResult;
+	}
+
 }
