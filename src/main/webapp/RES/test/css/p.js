@@ -7,9 +7,7 @@
 /*         and Superclasses         */
 /** ********************************* */
 
-Initialize()
-
-OnDOMReady(function() {
+$(function() {
 	var gfurl = 'http://fonts.googleapis.com/css?family='
 	var wheight = GetWindowHeight()
 	var tags = document.getElementsByTagName("*")

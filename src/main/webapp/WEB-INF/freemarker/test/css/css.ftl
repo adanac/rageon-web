@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 	<title>rageon</title>
-	<link rel='stylesheet' type='text/css' href='PC.css' />
-    <script src='PJ.js'></script><script src='PC.js'></script>
+	<link rel='stylesheet' type='text/css' href='${resRoot}/test/css/p.css' />
+	<link rel='stylesheet' type='text/css' href='${resRoot}/test/css/psmall.css' />
+	<script src='${resRoot}/common/js/jquery.min.js'></script>
+    <script src='${resRoot}/test/css/p.js'></script>
+    <script src='${resRoot}/test/css/psmall.js'></script>
 	<script>
 		var basePath = "${base}";// 根目录
 		var resRoot = "${resRoot}";
@@ -74,7 +77,7 @@
          This line is vertically centered
       </div>
       
-      <img class='fadeout[2000]' src='i6.jpg' />
+      <img class='fadeout[2000]' src='${resRoot}/test/css/i6.jpg' />
       
       <h3>The Tyger, William Blake</h3>
       <pre><div class='typetext[60000]'>
@@ -125,39 +128,39 @@
          </tr>
       </table>
 	  
-	  <img src='smiley.gif' />
-      <img class='rotatec90' src='smiley.gif' />
-      <img class='rotatec180' src='smiley.gif' />
-      <img class='rotatec270' src='smiley.gif' /><br />
+	  <img src='${resRoot}/test/css/smiley.gif' />
+      <img class='rotatec90' src='${resRoot}/test/css/smiley.gif' />
+      <img class='rotatec180' src='${resRoot}/test/css/smiley.gif' />
+      <img class='rotatec270' src='${resRoot}/test/css/smiley.gif' /><br />
 
-      <img src='smiley.gif' />
-      <img class='transitionall rotatec90_h' src='smiley.gif' />
-      <img class='transitionall rotatec180_h' src='smiley.gif' />
-      <img class='transitionall rotatec270_h' src='smiley.gif' /><br />
+      <img src='${resRoot}/test/css/smiley.gif' />
+      <img class='transitionall rotatec90_h' src='${resRoot}/test/css/smiley.gif' />
+      <img class='transitionall rotatec180_h' src='${resRoot}/test/css/smiley.gif' />
+      <img class='transitionall rotatec270_h' src='${resRoot}/test/css/smiley.gif' /><br />
 
-      <img src='smiley.gif' />
-      <img class='transitionall_l rotatea90_h' src='smiley.gif' />
-      <img class='transitionall_l rotatea180_h' src='smiley.gif' />
-      <img class='transitionall_l rotatea270_h' src='smiley.gif' />
+      <img src='${resRoot}/test/css/smiley.gif' />
+      <img class='transitionall_l rotatea90_h' src='${resRoot}/test/css/smiley.gif' />
+      <img class='transitionall_l rotatea180_h' src='${resRoot}/test/css/smiley.gif' />
+      <img class='transitionall_l rotatea270_h' src='${resRoot}/test/css/smiley.gif' />
 	  
 	  <span class='thumbview'>
-         <img class='bwidth1 bblack bsolid' src='t1.jpg' />
+         <img class='bwidth1 bblack bsolid' src='${resRoot}/test/css/t1.jpg' />
          <span class='caption' alt='San Francisco, Pier 39 Seals'>
-            <img src='i1.jpg' />
+            <img src='${resRoot}/test/css/i1.jpg' />
          </span>
       </span>
       <span class='thumbview'>
-         <img class='bwidth1 bblack bsolid' src='t2.jpg' />
+         <img class='bwidth1 bblack bsolid' src='${resRoot}/test/css/t2.jpg' />
          <span class='caption' alt='San Francisco Bay Bridge'>
-            <img src='i2.jpg' />
+            <img src='${resRoot}/test/css/i1.jpg' />
          </span>
       </span>
 	  
-	  <img src='smiley.gif' class='scaledown1' />
-      <img src='smiley.gif' class='scaledown2' />
-      <img src='smiley.gif' class='scaledown3' />
-      <img src='smiley.gif' class='scaledown4' />
-      <img src='smiley.gif' class='scaledown5' /><br /><br /><br />
+	  <img src='${resRoot}/test/css/smiley.gif' class='scaledown1' />
+      <img src='${resRoot}/test/css/smiley.gif' class='scaledown2' />
+      <img src='${resRoot}/test/css/smiley.gif' class='scaledown3' />
+      <img src='${resRoot}/test/css/smiley.gif' class='scaledown4' />
+      <img src='${resRoot}/test/css/smiley.gif' class='scaledown5' /><br /><br /><br />
 	  
 	  <h2>Global Warming</h2>
       <div class='rightsidebar'>
@@ -180,12 +183,9 @@
       future greenhouse gas emissions.
 	  
 	  <div class='topdockbar'>
-         <img class='topdockitem' src='i1.gif'>
-         <img class='topdockitem' src='i2.gif'>
-         <img class='topdockitem' src='i3.gif'>
-         <img class='topdockitem' src='i4.gif'>
-         <img class='topdockitem' src='i5.gif'>
-         <img class='topdockitem' src='i6.gif'>
+         <img class='topdockitem' src='${resRoot}/test/css/i6.gif'>
+         <img class='topdockitem' src='${resRoot}/test/css/i6.gif'>
+         <img class='topdockitem' src='${resRoot}/test/css/i6.gif'>
       </div>
 	  
 	  <a href='/'>Home</a> |
@@ -258,12 +258,12 @@
       </div>
 	  
 	  <div class='bottomdockbar'>
-         <img class='bottomdockitem' src='i1.gif'>
-         <img class='bottomdockitem' src='i2.gif'>
-         <img class='bottomdockitem' src='i3.gif'>
-         <img class='bottomdockitem' src='i4.gif'>
-         <img class='bottomdockitem' src='i5.gif'>
-         <img class='bottomdockitem' src='i6.gif'>
+         <img class='bottomdockitem' src='${resRoot}/test/css/i6.gif'>
+         <img class='bottomdockitem' src='${resRoot}/test/css/i6.gif'>
+         <img class='bottomdockitem' src='${resRoot}/test/css/i6.gif'>
+         <img class='bottomdockitem' src='${resRoot}/test/css/i6.gif'>
+         <img class='bottomdockitem' src='${resRoot}/test/css/i6.gif'>
+         <img class='bottomdockitem' src='${resRoot}/test/css/i6.gif'>
       </div>
 	  
 	  <input type='submit' class='smallbutton'
@@ -398,20 +398,20 @@
       <span class='leftpadding90_h lime_b'>Using leftpadding90_h</span><br />
       <span class='leftpadding100_h lime_b'>Using leftpadding100_h</span>
       
-      <img border='1' class='padding'               src='photo1.jpg' /> &nbsp;
-		<img border='1' class='smallestround padding' src='photo1.jpg' /> &nbsp;
-		<img border='1' class='smallround padding'    src='photo1.jpg' />
+      <img border='1' class='padding'               src='${resRoot}/test/css/photo1.jpg' /> &nbsp;
+		<img border='1' class='smallestround padding' src='${resRoot}/test/css/photo1.jpg' /> &nbsp;
+		<img border='1' class='smallround padding'    src='${resRoot}/test/css/photo1.jpg' />
 		<br /><br />
-		<img border='1' class='round padding'         src='photo1.jpg' /> &nbsp;
-		<img border='1' class='largeround padding'    src='photo1.jpg' /> &nbsp;
-		<img border='1' class='largestround padding'  src='photo1.jpg' />
+		<img border='1' class='round padding'         src='${resRoot}/test/css/photo1.jpg' /> &nbsp;
+		<img border='1' class='largeround padding'    src='${resRoot}/test/css/photo1.jpg' /> &nbsp;
+		<img border='1' class='largestround padding'  src='${resRoot}/test/css/photo1.jpg' />
       
       <div class='relative'
          style='width:500px; height:350px; border:1px solid;'>
-         <img class='absolute toleft totop'     src='photo4.jpg' />
-         <img class='absolute toright totop'    src='photo4.jpg' />
-         <img class='absolute toleft tobottom'  src='photo4.jpg' />
-         <img class='absolute toright tobottom' src='photo4.jpg' />
+         <img class='absolute toleft totop'     src='${resRoot}/test/css/photo4.jpg' />
+         <img class='absolute toright totop'    src='${resRoot}/test/css/photo4.jpg' />
+         <img class='absolute toleft tobottom'  src='${resRoot}/test/css/photo4.jpg' />
+         <img class='absolute toright tobottom' src='${resRoot}/test/css/photo4.jpg' />
       </div>
       
       <div class='scroll leftfloat' style='width:250px; height:180px;'>
@@ -448,12 +448,12 @@
       
       
       <center>
-         <img border='1'                         src='photo1.jpg' /> &nbsp; &nbsp;
-         <img border='1' class='smallestpadding' src='photo1.jpg' /> &nbsp; &nbsp;
-         <img border='1' class='smallpadding'    src='photo1.jpg' /> <br /><br />
-         <img border='1' class='padding'         src='photo1.jpg' /> &nbsp; &nbsp;
-         <img border='1' class='largepadding'    src='photo1.jpg' /> &nbsp; &nbsp;
-         <img border='1' class='largestpadding'  src='photo1.jpg' />
+         <img border='1'                         src='${resRoot}/test/css/photo1.jpg' /> &nbsp; &nbsp;
+         <img border='1' class='smallestpadding' src='${resRoot}/test/css/photo1.jpg' /> &nbsp; &nbsp;
+         <img border='1' class='smallpadding'    src='${resRoot}/test/css/photo1.jpg' /> <br /><br />
+         <img border='1' class='padding'         src='${resRoot}/test/css/photo1.jpg' /> &nbsp; &nbsp;
+         <img border='1' class='largepadding'    src='${resRoot}/test/css/photo1.jpg' /> &nbsp; &nbsp;
+         <img border='1' class='largestpadding'  src='${resRoot}/test/css/photo1.jpg' />
       </center>
       
       
