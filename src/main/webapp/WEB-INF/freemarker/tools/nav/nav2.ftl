@@ -8,12 +8,34 @@
 <head>
 <meta charset="utf-8">
 <title>navigation</title>
-<script type="text/javascript">function browserRedirect(){var e=navigator.userAgent.toLowerCase(),t=e.match(/iphone/i)=="iphone",n=e.match(/ipod/i)=="ipod",r=e.match(/ipad/i)=="ipad",i=e.match(/android/i)=="android",s=e.match(/windows phone/i)=="windows phone",o=e.match(/mqqbrowser/i)=="mqqbrowser",u=e.match(/mobile/i)=="mobile",a=e.match(/symbianos/i)=="symbianos";if(t||n||s||o||a||i&&u)window.location.href="http://s.61ertong.com/";else if(r||i&&!u)window.location.href="http://pad.61ertong.com/"}browserRedirect();</script>
+<script type="text/javascript">
+    function browserRedirect() {
+        var e = navigator.userAgent.toLowerCase(),
+        t = e.match(/iphone/i) == "iphone",
+        n = e.match(/ipod/i) == "ipod",
+        r = e.match(/ipad/i) == "ipad",
+        i = e.match(/android/i) == "android",
+        s = e.match(/windows phone/i) == "windows phone",
+        o = e.match(/mqqbrowser/i) == "mqqbrowser",
+        u = e.match(/mobile/i) == "mobile",
+        a = e.match(/symbianos/i) == "symbianos";
+        if (t || n || s || o || a || i && u) window.location.href = "http://s.61ertong.com/";
+        else if (r || i && !u) window.location.href = "http://pad.61ertong.com/"
+    }
+    browserRedirect();
+</script>
 <link href="${resRoot }/tools/nav/css/2015style.css" rel="stylesheet"
 	type="text/css" />
-<script type="text/javascript">if(screen.width<=1360){document.write('<link type="text/css" rel="stylesheet" href="/statics/2015/css/2015style_1360.css">');}</script>
+<script type="text/javascript">
+    if (screen.width <= 1360) {
+        document.write('<link type="text/css" rel="stylesheet" href="/statics/2015/css/2015style_1360.css">');
+    }
+</script>
 <script src='${resRoot }/tools/nav/js/title.js' type='text/javascript'></script>
+<!--  
 <script src="http://dup.baidustatic.com/js/ds.js"></script>
+-->
+<script src="${resRoot }/tools/nav/js/ds.js"></script>
 <script src="${resRoot }/tools/nav/js/jquery-1.5.1.min.js"></script>
 <script src="${resRoot }/tools/nav/js/common.js"></script>
 </head>

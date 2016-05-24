@@ -3,23 +3,29 @@ package com.adanac.tool.rageon.login;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.adanac.framework.utils.StringUtils;
 import com.adanac.tool.rageon.common.BaseAction;
 
 @Controller
 @RequestMapping(value = "/", produces = "text/html;charset=UTF-8")
 public class HomeAction extends BaseAction {
-
-	@RequestMapping("/")
-	public String index(HttpServletRequest request, ModelMap model) {
+	@RequestMapping("index")
+	public String index(HttpServletRequest request, @PathVariable String id) {
 		return "index.ftl";
 	}
 
-	@RequestMapping("index")
-	public String home(HttpServletRequest request, ModelMap model) {
-		return "index.ftl";
+	@RequestMapping("index/{id}")
+	public String home(HttpServletRequest request, @PathVariable String id) {
+		String link = "";
+		if (StringUtils.isEmpty(id)) {
+			link = "index.ftl";
+		} else {
+			link = "index" + id + ".ftl";
+		}
+		return link;
 	}
 
 	@RequestMapping("admin")
