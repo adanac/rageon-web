@@ -6,7 +6,7 @@
 	$.extend($.message, {
 		
 		initKeyWordDropdown : function() {
-			$('#kid').select2({
+			$('#kid1').select2({
 				placeholder : "请选择",
 				// minimumInputLength: 1,
 				ajax : {  
@@ -58,7 +58,7 @@
 				}
 			});
 			
-			$("#kid").on("change", function (e) { ToggleProductList("kid");})
+			$("#kid1").on("change", function (e) { ToggleProductList("kid1");})
 			
 //			$('#kid').on('select2-selecting',function(el){
 //				 var choice = el.choice;
@@ -74,6 +74,64 @@
 
 })(jQuery, window, document);
 
+
+function initDemo1(){
+	$('#kid2').select2({
+		placeholder : "请选择",
+		// minimumInputLength: 1,
+		
+		initSelection : function(element, callback) {//要放在ajax方法之前
+			 var ev = element.val();
+		     callback({//自定义属性名称要与formatSelection返回的属性名称一致
+		    	 id: ev,
+                 name: ev
+		     });
+		},
+		id : function(priv) {
+			return priv.id;
+		},
+		formatResult : function(word) { 
+			if (word.id){
+				var markup = "<div id='"
+						+ word.id
+						+ "'>"
+						+ word.name + "</div>";
+				return markup;
+			}
+		}, // omitted for brevity, see the source of this page  
+		formatSelection : function(repo) {
+			return repo.name;
+		}, // omitted for brevity, see the source of this page
+		dropdownCssClass : "bigdrop", // apply css that makes the
+										// dropdown taller
+		ajax : {  
+			url : "${base}/front/list.do",
+			dataType : 'json',
+			quietMillis : 250,
+			data : function(term, pageNumber) {
+				return {
+					name : term, // search term
+					pageSize:10,
+					pageNumber:pageNumber
+				};
+			},
+			results : function(data, pageNumber) { 
+				if(data&&data.rows&&data.rows.length){	 
+					var more = (pageNumber*10)<data.total;	//用来判断是否还有更多数据可以加载
+				    return {
+						results:data.rows,more:more	
+				    };
+				}else{
+				    return {
+						results : data.rows
+					};
+				}				
+			},
+			cache : true
+		},
+		escapeMarkup : function(m) { return m;	}
+	});
+}
 
 function initDemo2(){
 	$("#num").empty(); //清除下拉框option，不然会累加
@@ -222,7 +280,7 @@ function initDemo4(){
 	    maximumSelectionSize : 5,                               // 限制数量
 	    initSelection        : function (element, callback) {   // 初始化时设置默认值
 	        var data = [];
-	            data.push({ id: element.val(), text: element.val() });
+	            data.push({ id: "白萝卜", text: element.val() });
 	        callback(data);
 	    },
 	    createSearchChoice   : function(term, data) {           // 创建搜索结果（使用户可以输入匹配值以外的其它值）

@@ -26,7 +26,8 @@
 	<input type="text" id="keyid" />
 	<input type="text" id="keyname" />
 	<input type="text" id="msgId" />
-	选择关键字:<input type="text" id="kid" class="form-control" title='' ><br/>
+	选择关键字:<input type="text" id="kid1" class="form-control" title='' >&nbsp;
+	<input type="text" id="kid2" class="form-control" title='' value="6" ><br/>
 	
 	<input type="text" id="num"><br/>
 	
@@ -55,6 +56,8 @@
 	    jQuery(document).ready(function() {
 	    	//demo1
 	    	$.message.initKeyWordDropdown();
+	    	
+	    	initDemo1();
 	    	
 	    	//demo2
 	    	initDemo2();
