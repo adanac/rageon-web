@@ -47,6 +47,25 @@
 						target="_blank">jquery</a>
 				</p>
 			</li>
+			<li class="pic" style="height: 50px; overflow: hidden;"><a
+				href="#" target="_blank">加解密工具</a>
+				<p class="subnav">
+					<a href="${base}/"
+						target="_blank">文字加解密</a>
+				</p>
+				<p class="subnav">
+					<a href="#"
+						target="_blank">MD5加密</a>
+				</p>
+				<p class="subnav">
+					<a href="${base}/"
+						target="_blank">URL加密</a>
+				</p>
+				<p class="subnav">
+					<a href="${base}/"
+						target="_blank">散列/哈希</a>
+				</p>
+			</li>
 		</ul>
 	</div>
 </body>
