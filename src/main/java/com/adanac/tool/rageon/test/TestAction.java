@@ -13,8 +13,12 @@ import com.adanac.tool.rageon.common.BaseAction;
 public class TestAction extends BaseAction {
 
 	@RequestMapping("css")
-	public String index(HttpServletRequest request, ModelMap model) {
+	public String css(HttpServletRequest request, ModelMap model) {
 		return "test/css/css.ftl";
 	}
 
+	@RequestMapping("echarts")
+	public String echarts(HttpServletRequest request, ModelMap model) {
+		return "test/echartsDemo.ftl";
+	}
 }
