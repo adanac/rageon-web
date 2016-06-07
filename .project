@@ -3,6 +3,7 @@
 	<name>rageon-web</name>
 	<comment></comment>
 	<projects>
+		<project>demo-webservice</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

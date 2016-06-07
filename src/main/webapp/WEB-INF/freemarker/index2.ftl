@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 	<title>rageon</title>
-	<link href="${resRoot }/tools/nav/css/2015style.css" rel="stylesheet"
-	type="text/css" />
-<script type="text/javascript">
-    if (screen.width <= 1360) {
-        document.write('<link type="text/css" rel="stylesheet" href="/statics/2015/css/2015style_1360.css">');
-    }
-</script>
+	<link href="${resRoot }/tools/nav/css/2015style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+	    if (screen.width <= 1360) {
+	        document.write('<link type="text/css" rel="stylesheet" href="/statics/2015/css/2015style_1360.css">');
+	    }
+	</script>
 <script src='${resRoot }/tools/nav/js/title.js' type='text/javascript'></script>
 <!--  
 <script src="http://dup.baidustatic.com/js/ds.js"></script>
@@ -39,7 +38,7 @@
 			<li class="flash" style="height: 50px; overflow: hidden;"><a
 				href="#" target="_blank">前端demo</a>
 				<p class="subnav">
-					<a href="${base}/"
+					<a href="${base}/front/toSelect/2.do"
 						target="_blank">select2</a>
 				</p>
 				<p class="subnav">
@@ -64,6 +63,21 @@
 				<p class="subnav">
 					<a href="${base}/"
 						target="_blank">散列/哈希</a>
+				</p>
+			</li>
+			<li class="pic" style="height: 50px; overflow: hidden;"><a
+				href="#" target="_blank">文件相关</a>
+				<p class="subnav">
+					<a href="${base}/file/dom4j.do"
+						target="_blank">dom4j</a>
+				</p>
+				<p class="subnav">
+					<a href="${base}/file/upDown.do"
+						target="_blank">上传、下载</a>
+				</p>
+				<p class="subnav">
+					<a href="${base}/file/craw.do"
+						target="_blank">抓取demo</a>
 				</p>
 			</li>
 		</ul>
