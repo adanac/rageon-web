@@ -13,16 +13,22 @@ import com.adanac.tool.rageon.common.BaseAction;
 @RequestMapping(value = "file", produces = "application/json;charset=UTF-8")
 public class FileAction extends BaseAction {
 
-	@RequestMapping(value = "/dom4j", method = RequestMethod.GET)
+	@RequestMapping(value = "/toDom4j", method = RequestMethod.GET)
 	public String toDom4j(HttpServletRequest request, ModelMap model) {
 
 		return "file/dom4j.ftl";
 	}
 
-	@RequestMapping(value = "/craw", method = RequestMethod.GET)
+	@RequestMapping(value = "/toCraw", method = RequestMethod.GET)
 	public String toCraw(HttpServletRequest request, ModelMap model) {
 
 		return "file/crawtool.ftl";
+	}
+
+	@RequestMapping(value = "/toUpDown", method = RequestMethod.GET)
+	public String toUpDown(HttpServletRequest request, ModelMap model) {
+
+		return "file/upDown.ftl";
 	}
 
 }

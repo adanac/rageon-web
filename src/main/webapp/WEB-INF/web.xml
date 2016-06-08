@@ -68,6 +68,20 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
+	<!-- 文件下载 -->
+	<servlet>
+	    <description></description>
+	    <display-name>DownloadAction</display-name>
+	    <servlet-name>DownloadAction</servlet-name>
+	    <servlet-class>com.adanac.tool.rageon.file.DownLoadAction</servlet-class>
+	</servlet>
+	 
+	<servlet-mapping>
+	    <servlet-name>DownloadAction</servlet-name>
+	    <url-pattern>/file/down</url-pattern>
+	</servlet-mapping>
+	
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.htm</url-pattern>

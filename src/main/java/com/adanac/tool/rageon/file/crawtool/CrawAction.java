@@ -30,8 +30,8 @@ public class CrawAction extends BaseAction {
 		return br;
 	}
 
-	@RequestMapping(value = "/toCraw", method = RequestMethod.GET)
-	public String toCraw(HttpServletRequest request, ModelMap model) {
+	@RequestMapping(value = "/toCraw163", method = RequestMethod.GET)
+	public String toCraw163(HttpServletRequest request, ModelMap model) {
 		return "file/craw163.ftl";
 	}
 

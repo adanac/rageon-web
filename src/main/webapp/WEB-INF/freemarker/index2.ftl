@@ -68,15 +68,15 @@
 			<li class="pic" style="height: 50px; overflow: hidden;"><a
 				href="#" target="_blank">文件相关</a>
 				<p class="subnav">
-					<a href="${base}/file/dom4j.do"
+					<a href="${base}/file/toDom4j.do"
 						target="_blank">dom4j</a>
 				</p>
 				<p class="subnav">
-					<a href="${base}/file/upDown.do"
+					<a href="${base}/file/toUpDown.do"
 						target="_blank">上传、下载</a>
 				</p>
 				<p class="subnav">
-					<a href="${base}/file/craw.do"
+					<a href="${base}/file/toCraw.do"
 						target="_blank">抓取demo</a>
 				</p>
 			</li>
