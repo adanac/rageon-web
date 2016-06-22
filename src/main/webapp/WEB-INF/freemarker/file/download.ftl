@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>文件上传、下载</title>
+    <title>文件下载</title>
     <meta charset="UTF-8">
     <#include "../../common/head.ftl">
 </head>
@@ -73,19 +73,33 @@
 <body>
 	<input type="button" id="start" value="开始下载" />
 	<input type="button" id="stop" value="暂停下载" />
-		
+	<br/>
+	
+	<form name="form1" action="<%=request.getContextPath()%>/strutsUploadFileAction_signle.action"
+		 method="post" enctype="multipart/form-data">
+	    <input type="file" name="file4upload" size="30"> <br> 
+	    <input type="submit" value="submit_signle" name="submit">
+	</form>
+	
+	
+	
+	
+	
+	
+	
+	
     <script type="text/javascript">
-			$(document).ready(function(){
-				$('#start').click(function(){
-					downFile();
-				});
-				
-				$('#stop').click(function(){
-					stopDownFile();
-				});
-				
+		$(document).ready(function(){
+			$('#start').click(function(){
+				downFile();
 			});
-		</script>
+			
+			$('#stop').click(function(){
+				stopDownFile();
+			});
+			
+		});
+	</script>
 </body>
 </html>
 

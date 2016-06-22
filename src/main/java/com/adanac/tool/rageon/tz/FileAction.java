@@ -1,4 +1,4 @@
-package com.adanac.tool.rageon.file;
+package com.adanac.tool.rageon.tz;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,20 +15,17 @@ public class FileAction extends BaseAction {
 
 	@RequestMapping(value = "/toDom4j", method = RequestMethod.GET)
 	public String toDom4j(HttpServletRequest request, ModelMap model) {
-
 		return "file/dom4j.ftl";
 	}
 
 	@RequestMapping(value = "/toCraw", method = RequestMethod.GET)
 	public String toCraw(HttpServletRequest request, ModelMap model) {
-
 		return "file/crawtool.ftl";
 	}
 
-	@RequestMapping(value = "/toUpDown", method = RequestMethod.GET)
+	@RequestMapping(value = "/toUpload", method = RequestMethod.GET)
 	public String toUpDown(HttpServletRequest request, ModelMap model) {
-
-		return "file/upDown.ftl";
+		return "file/upload.ftl";
 	}
 
 }

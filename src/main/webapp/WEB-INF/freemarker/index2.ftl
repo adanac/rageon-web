@@ -80,6 +80,22 @@
 						target="_blank">抓取demo</a>
 				</p>
 			</li>
+			<li class="home" style="height: 50px; overflow: hidden;">
+				<a href="#" target="_blank">模块</a>
+				<p class="subnav">
+					<a href="${base}/sfunc/toCard.do"
+						target="_blank">查询Idcard</a>
+				</p>
+				
+			</li>
+			<li class="pic" style="height: 50px; overflow: hidden;">
+				<a href="#" target="_blank">SQL学习</a>
+				<p class="subnav">
+					<a href="${base}/sql/toSQL.do"
+						target="_blank">mysql</a>
+				</p>
+				
+			</li>
 		</ul>
 	</div>
 </body>

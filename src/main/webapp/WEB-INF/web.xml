@@ -76,6 +76,16 @@
 	    <servlet-name>DownloadAction</servlet-name>
 	    <servlet-class>com.adanac.tool.rageon.file.DownLoadAction</servlet-class>
 	</servlet>
+	
+	<servlet>
+	    <servlet-name>UploadHandleServlet</servlet-name>
+	    <servlet-class>com.adanac.tool.rageon.file.upload.UploadHandleServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>UploadHandleServlet</servlet-name>
+	    <url-pattern>/servlet/UploadHandleServlet</url-pattern>
+	</servlet-mapping>
 	 
 	<servlet-mapping>
 	    <servlet-name>DownloadAction</servlet-name>

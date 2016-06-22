@@ -1,4 +1,4 @@
-package com.adanac.tool.rageon.ip;
+package com.adanac.tool.rageon.tz;
 
 import javax.servlet.http.HttpServletRequest;
 
