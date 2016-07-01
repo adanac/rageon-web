@@ -96,6 +96,14 @@
 				</p>
 				
 			</li>
+			<li class="pic" style="height: 50px; overflow: hidden;">
+				<a href="#" target="_blank">前后端交互</a>
+				<p class="subnav">
+					<a href="${base}/front/toSQL.do"
+						target="_blank">保存多行数据</a>
+				</p>
+				
+			</li>
 		</ul>
 	</div>
 </body>
