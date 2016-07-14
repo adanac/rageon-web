@@ -45,6 +45,10 @@
 					<a href="#"
 						target="_blank">jquery</a>
 				</p>
+				<p class="subnav">
+					<a href="${base}/front/toRun.do"
+						target="_blank">html运行效果</a>
+				</p>
 			</li>
 			<li class="pic" style="height: 50px; overflow: hidden;"><a
 				href="#" target="_blank">加解密工具</a>
@@ -81,7 +85,7 @@
 				</p>
 			</li>
 			<li class="home" style="height: 50px; overflow: hidden;">
-				<a href="#" target="_blank">模块</a>
+				<a href="#" target="_blank">小功能</a>
 				<p class="subnav">
 					<a href="${base}/sfunc/toCard.do"
 						target="_blank">查询Idcard</a>
@@ -102,7 +106,19 @@
 					<a href="${base}/front/toSQL.do"
 						target="_blank">保存多行数据</a>
 				</p>
-				
+			</li>
+			<li class="pic" style="height: 50px; overflow: hidden;">
+				<a href="#" target="_blank">模块</a>
+				<p class="subnav">
+					<a href="${base}/module/toSolr.do"
+						target="_blank">solr</a>
+				</p>
+				<!-- 
+				<p class="subnav">
+					<a href="${base}/module/toSpringSecurity.do"
+						target="_blank">spring security</a>
+				</p>
+				 -->
 			</li>
 		</ul>
 	</div>

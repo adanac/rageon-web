@@ -21,4 +21,20 @@ public class IndexAction extends BaseAction {
 	public String frontInteraction(HttpServletRequest request, @PathVariable String id) {
 		return "front/interaction/" + id + ".ftl";
 	}
+
+	@RequestMapping("front/html/run")
+	public String frontRun(HttpServletRequest request) {
+		return "front/html/run.ftl";
+	}
+
+	@RequestMapping("module/solr/")
+	public String moduleSolr(HttpServletRequest request) {
+		return "module/solr.ftl";
+	}
+
+	/*
+	 * @RequestMapping("module/springSecurity/") public String
+	 * moduleSpringSecurity(HttpServletRequest request) { return
+	 * "module/springSecurity.ftl"; }
+	 */
 }

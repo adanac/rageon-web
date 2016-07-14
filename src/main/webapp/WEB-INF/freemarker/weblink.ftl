@@ -30,11 +30,14 @@
 		https://github.com/rapid7/metasploit-framework/wiki/How-to-use-a-reverse-shell-in-Metasploit
 	exploit_db:
 		https://www.exploit-db.com/
+	
 </body>
 
 	安全论坛：
 		http://www.evil0x.com/posts/838.html
 		http://www.secpulse.com/archives/45888.html
 		http://www.yunsec.net/
+	威胁情报分析平台
+		https://www.virusbook.cn/
 		
 </html>
