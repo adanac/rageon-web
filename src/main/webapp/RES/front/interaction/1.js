@@ -157,7 +157,7 @@ function initBind(){
 	         return "==>" + item + "<==";
 	    },
  
-        updater: function(item) { //选中某元素后的事件
+        updater: function(item) {
          console.log("'" + item + "' selected.");
          $.ajax({
 				type : "post",
@@ -188,5 +188,4 @@ function append(){
 	var tbody = $('#bcTbody');
 	tbody.append(tem);
 	clickCount++;
-	console.log('添加隐藏域元素到tbody');
 }

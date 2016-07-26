@@ -113,10 +113,12 @@
 					<a href="${base}/module/toSolr.do"
 						target="_blank">solr</a>
 				</p>
+				<!-- 
 				<p class="subnav">
-					<a href="${base}/module/toActiveMq.do"
-						target="_blank">ActiveMq</a>
+					<a href="${base}/module/toSpringSecurity.do"
+						target="_blank">spring security</a>
 				</p>
+				 -->
 			</li>
 		</ul>
 	</div>
