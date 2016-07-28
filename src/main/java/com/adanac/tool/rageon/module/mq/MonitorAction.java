@@ -1,4 +1,4 @@
-package com.adanac.tool.rageon.module;
+package com.adanac.tool.rageon.module.mq;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

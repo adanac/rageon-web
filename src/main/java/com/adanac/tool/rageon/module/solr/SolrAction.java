@@ -1,4 +1,4 @@
-package com.adanac.tool.rageon.module;
+package com.adanac.tool.rageon.module.solr;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,6 +15,7 @@ import com.adanac.framework.page.PagerParam;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
 import com.adanac.tool.rageon.intf.common.entity.CommonDto;
+import com.adanac.tool.rageon.intf.module.solr.service.SearchService;
 import com.adanac.tool.rageon.intf.module.solr.service.SolrCommonSearchService;
 
 @Controller
@@ -23,8 +24,8 @@ public class SolrAction extends BaseAction {
 	@Autowired
 	private SolrCommonSearchService commonService;
 
-	// @Autowired
-	// private SolrGoodsSearchService goodService;
+	@Autowired
+	private SearchService searchService;
 
 	@ResponseBody
 	@RequestMapping(value = "/list", method = RequestMethod.POST, produces = "application/json")
@@ -72,6 +73,22 @@ public class SolrAction extends BaseAction {
 		// br.setErrorMsg("queryBycardno error:" + e.getMessage());
 		// br.setStatus(BaseResult.ERROR);
 		// }
+		return br;
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/goods/{companyId}", method = RequestMethod.GET, produces = "application/json")
+	public BaseResult queryWithSolr(HttpServletRequest request, @PathVariable String companyId) {
+		log.info("companyId:" + companyId);
+		BaseResult br = new BaseResult();
+		try {
+			Pager<com.adanac.commclient.solr.dto.SolrGoodsDto> datas = searchService.searchGoodsSolrClient(companyId);
+			br.setContent(datas);
+			br.setStatus(BaseResult.SUCCESS);
+		} catch (Exception e) {
+			br.setErrorMsg("queryById error:" + e.getMessage());
+			br.setStatus(BaseResult.ERROR);
+		}
 		return br;
 	}
 

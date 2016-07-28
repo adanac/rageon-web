@@ -31,6 +31,9 @@
 	exploit_db:
 		https://www.exploit-db.com/
 	
+	课程资源网站：	
+	https://www.class-central.com/
+	
 </body>
 
 	安全论坛：
