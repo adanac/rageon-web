@@ -36,11 +36,6 @@
 
 		<dependency>
 			<groupId>com.adanac.tool</groupId>
-			<artifactId>rageon-intf</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.adanac.tool</groupId>
 			<artifactId>rageon-service</artifactId>
 			<version>1.0.0</version>
 		</dependency>
