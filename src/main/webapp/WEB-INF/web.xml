@@ -6,14 +6,15 @@
 	<display-name>Archetype Created Web Application</display-name>
 	
 	<welcome-file-list>
-		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.do</welcome-file>
 	</welcome-file-list>
 	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 		classpath:conf/spring/spring-impl.xml,
-		classpath:conf/spring/spring-res.xml
+		classpath:conf/spring/spring-res.xml,
+		classpath:conf/spring/spring-config.xml
 		<!-- ,
 		classpath:conf/spring/spring-dubbo.xml,	   
 		classpath:conf/spring/spring-user.xml,

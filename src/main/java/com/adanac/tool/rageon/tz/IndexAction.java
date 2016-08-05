@@ -27,14 +27,14 @@ public class IndexAction extends BaseAction {
 		return "front/html/run.ftl";
 	}
 
-	@RequestMapping("module/solr/")
+	@RequestMapping("module/solr")
 	public String moduleSolr(HttpServletRequest request) {
 		return "module/solr.ftl";
 	}
 
-	/*
-	 * @RequestMapping("module/springSecurity/") public String
-	 * moduleSpringSecurity(HttpServletRequest request) { return
-	 * "module/springSecurity.ftl"; }
-	 */
+	@RequestMapping("module/toSpringMvc")
+	public String moduleSpringSecurity(HttpServletRequest request) {
+		return "module/springMvc.ftl";
+	}
+
 }

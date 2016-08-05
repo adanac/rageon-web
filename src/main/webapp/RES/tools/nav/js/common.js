@@ -191,7 +191,7 @@ function CheckLoginAjax() {
     })
 }
 function initHeader() {
-    CheckLoginAjax(),
+    //CheckLoginAjax(),
     $(".nav a").click(function() {
         $(this).blur()
     }),

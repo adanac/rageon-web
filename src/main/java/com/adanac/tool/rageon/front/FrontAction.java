@@ -14,7 +14,6 @@ import com.adanac.framework.page.Pager;
 import com.adanac.framework.page.PagerParam;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.common.entity.BootstrapPage;
 import com.adanac.tool.rageon.intf.common.entity.BootstrapTable;
 import com.adanac.tool.rageon.intf.common.entity.CommonDto;
 import com.adanac.tool.rageon.intf.common.service.CommonService;
@@ -100,9 +99,9 @@ public class FrontAction extends BaseAction {
 		try {
 			CommonDto commonDto = new CommonDto();
 			commonDto.setId(id);
-			BootstrapPage param = new BootstrapPage();
-			param.setLimit(10);
-			param.setOffset(0);
+			PagerParam param = new PagerParam();
+			param.setPageSize(10);
+			param.setPageNumber(0);
 			Pager<CommonDto> dataPage = commonService.queryCommonDtoPage(commonDto, param, Integer.parseInt(query));
 			br.setContent(dataPage);
 			br.setStatus(BaseResult.SUCCESS);

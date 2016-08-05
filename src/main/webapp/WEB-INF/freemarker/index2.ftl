@@ -80,6 +80,14 @@
 						target="_blank">上传、下载</a>
 				</p>
 				<p class="subnav">
+					<a href="${base}/sfunc/toExportIn.do"
+						target="_blank">导入</a>
+				</p>
+				<p class="subnav">
+					<a href="${base}/sfunc/toCard.do"
+						target="_blank">导出</a>
+				</p>
+				<p class="subnav">
 					<a href="${base}/file/toCraw.do"
 						target="_blank">抓取demo</a>
 				</p>
@@ -90,7 +98,6 @@
 					<a href="${base}/sfunc/toCard.do"
 						target="_blank">查询Idcard</a>
 				</p>
-				
 			</li>
 			<li class="pic" style="height: 50px; overflow: hidden;">
 				<a href="#" target="_blank">SQL学习</a>
@@ -113,12 +120,30 @@
 					<a href="${base}/module/toSolr.do"
 						target="_blank">solr</a>
 				</p>
-				<!-- 
 				<p class="subnav">
-					<a href="${base}/module/toSpringSecurity.do"
+					<a href="${base}/activeMq/mqAddSync.do"
 						target="_blank">spring security</a>
 				</p>
-				 -->
+				<p class="subnav">
+					<a href="${base}/disconf/1042.do"
+						target="_blank">spring security</a>
+				</p>
+			</li>
+			<li class="pic" style="height: 50px; overflow: hidden;">
+				<a href="#" target="_blank">spring mvc</a>
+				<p class="subnav">
+					<a href="${base}/module/toSpringMvc.do"
+						target="_blank">注解</a>
+				</p>
+				<!-- 
+				<p class="subnav">
+					<a href="${base}/activeMq/mqAddSync.do"
+						target="_blank">spring security</a>
+				</p>
+				<p class="subnav">
+					<a href="${base}/disconf/1042.do"
+						target="_blank">spring security</a>
+				</p> -->
 			</li>
 		</ul>
 	</div>

@@ -12,3 +12,6 @@
 	<script src="${resRoot}/common/js/bxslider.min.js" type="text/javascript"></script>
 	<script src="${resRoot}/common/js/fitvids.min.js" type="text/javascript"></script>
 	<script src="${resRoot}/common/js/viewportchecker.js" type="text/javascript"></script>
+    
+    <!-- 提示层 -->
+    <script type="text/javascript" src="${resRoot}/common/js/metronic.js"></script>

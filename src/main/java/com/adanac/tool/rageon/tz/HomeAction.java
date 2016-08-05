@@ -14,7 +14,7 @@ import com.adanac.tool.rageon.common.BaseAction;
 public class HomeAction extends BaseAction {
 	@RequestMapping("index")
 	public String index(HttpServletRequest request, @PathVariable String id) {
-		return "index.ftl";
+		return "index2.ftl";
 	}
 
 	@RequestMapping("index/{id}")
