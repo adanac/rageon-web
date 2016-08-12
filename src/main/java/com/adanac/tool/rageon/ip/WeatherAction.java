@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.ip.service.WeatherService;
+import com.adanac.tool.rageon.ip.service.WeatherService;
 
 @Controller
 @RequestMapping(value = "/tq", produces = "text/html;charset=UTF-8")

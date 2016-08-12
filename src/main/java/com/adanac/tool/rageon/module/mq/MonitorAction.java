@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.common.entity.BaseResultDto;
-import com.adanac.tool.rageon.intf.module.mq.entity.MonitorDto;
-import com.adanac.tool.rageon.intf.module.mq.service.MonitorService;
+import com.adanac.tool.rageon.common.entity.BaseResultDto;
+import com.adanac.tool.rageon.module.mq.entity.MonitorDto;
+import com.adanac.tool.rageon.module.mq.service.MonitorService;
 
 @Controller
 @RequestMapping(value = "/monitor", produces = "text/html;charset=UTF-8")

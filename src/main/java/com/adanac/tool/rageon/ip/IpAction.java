@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.ip.entity.Md5Dto;
+import com.adanac.tool.rageon.ip.entity.Md5Dto;
 import com.adanac.tool.rageon.utils.IpAddressUtil;
 import com.adanac.tool.rageon.utils.MD5DecodeUtil;
 import com.adanac.tool.rageon.utils.MD5Util;

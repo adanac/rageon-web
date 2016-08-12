@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.sql.SqlService;
+import com.adanac.tool.rageon.sql.SqlService;
 import com.adanac.tool.rageon.utils.JsonUtil;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

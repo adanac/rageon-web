@@ -18,7 +18,7 @@ function upload(){
         $('.error-tip').show().hide();
     }
 
-	//按钮不可用
+		//按钮不可用
 		$("#upd").attr('disabled',true);//设置disabled属性为false，按钮可用
 		var getTimestamp = new Date().getTime();
 
@@ -56,10 +56,10 @@ function upload(){
             		$('#stack2').modal('show'); 
             	}
             	if(result.status == 5){
-            		layer.msg("文件格式不正确,请选择xls格式的文件导入");
+            		console.log("文件格式不正确,请选择xls格式的文件导入");
             	}
             	if(result.status == 6){
-            		layer.msg("excel有效数据不能超过500行");
+            		console.log("excel有效数据不能超过500行");
             	}
                 //数据库操作失败时
             	if(result.status == 7){
@@ -76,12 +76,4 @@ function upload(){
             	$("#upd").attr('disabled',false);//设置disabled属性为false，按钮可用
             }
         });
-}
-
-function toUserListPage(){
-//	var url = "${base}/menberCenterUser/toUserPage.do";
-//	location.href = url;
-	console.log('跳转到员工首页')
-}
-
- 
+} 

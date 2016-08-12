@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.adanac.framework.exception.SysException;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.common.entity.BaseResultDto;
-import com.adanac.tool.rageon.intf.module.disconf.service.DisconfService;
+import com.adanac.tool.rageon.common.entity.BaseResultDto;
+import com.adanac.tool.rageon.module.disconf.service.DisconfService;
 
 @Controller
 @RequestMapping(value = "/disconf", produces = "text/html;charset=UTF-8")

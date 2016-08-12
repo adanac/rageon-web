@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,10 +29,10 @@ import com.adanac.framework.page.PagerParam;
 import com.adanac.framework.utils.StringUtils;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
+import com.adanac.tool.rageon.common.entity.CommonDto;
+import com.adanac.tool.rageon.common.service.CommonService;
 import com.adanac.tool.rageon.constant.RageonConstant;
-import com.adanac.tool.rageon.intf.common.entity.CommonDto;
-import com.adanac.tool.rageon.intf.common.service.CommonService;
-import com.adanac.tool.rageon.intf.sfunc.intf.ExcelOperService;
+import com.adanac.tool.rageon.sfunc.intf.ExcelOperService;
 import com.adanac.tool.rageon.utils.excel.ExportExcelUtil;
 
 import net.sf.json.JSONObject;
@@ -55,14 +56,14 @@ public class ExcelOperController extends BaseAction {
 	 * @return status(0成功，1解析文件失败，2文件无内容，3数据格式不正确，4工号存在)
 	 * @return 3数据格式不正确
 	 */
-	@RequestMapping("/uploadExcel")
-	public String uploadExcel(@RequestParam(value = "excelFile", required = false) MultipartFile file,
+	@RequestMapping(value = "/uploadExcel", method = RequestMethod.POST)
+	public String uploadExcel(@RequestParam(value = "excelFile", required = false) MultipartFile excelFile,
 			HttpServletRequest request, HttpServletResponse response) {
 		// String param =request.getParameter("param");
 		String param = "1";
-		log.info("upload param=" + param + ",file=" + file.getOriginalFilename());
+		log.info("upload param=" + param + ",file=" + excelFile.getOriginalFilename());
 		BaseResult result = new BaseResult();
-		String filePath = saveFile(file, request);
+		String filePath = saveFile(excelFile, request);
 		if (StringUtils.isEmpty(filePath)) {
 			// 保存文件失败
 			log.info("上传文件失败");
@@ -122,7 +123,7 @@ public class ExcelOperController extends BaseAction {
 			// 工号empCode 真实姓名 realName 性别 职位 职称 手机号码 QQ 身份证号码 E_Mail 地址 备注
 
 			String[] headers = { "员工ID", "员工姓名", "性别", "年龄", "密码" };
-			String[] objFields = { "id", "username", "sex", "age", "password" };
+			String[] objFields = { "id", "username", "sex", "age", "passwd" };// 数据库字段名保持一致
 			try {
 				SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");// 设置日期格式
 				String now = df.format(new Date());// new Date()为获取当前系统时间

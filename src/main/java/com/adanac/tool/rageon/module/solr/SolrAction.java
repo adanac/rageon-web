@@ -14,9 +14,9 @@ import com.adanac.framework.page.Pager;
 import com.adanac.framework.page.PagerParam;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.common.entity.CommonDto;
-import com.adanac.tool.rageon.intf.module.solr.service.SearchService;
-import com.adanac.tool.rageon.intf.module.solr.service.SolrCommonSearchService;
+import com.adanac.tool.rageon.common.entity.CommonDto;
+import com.adanac.tool.rageon.module.solr.service.SearchService;
+import com.adanac.tool.rageon.module.solr.service.SolrCommonSearchService;
 
 @Controller
 @RequestMapping(value = "/solr", produces = "text/html;charset=UTF-8")
@@ -82,7 +82,7 @@ public class SolrAction extends BaseAction {
 		log.info("companyId:" + companyId);
 		BaseResult br = new BaseResult();
 		try {
-			Pager<com.adanac.commclient.solr.dto.SolrGoodsDto> datas = searchService.searchGoodsSolrClient(companyId);
+			Pager<com.adanac.commonclient.solr.dto.SolrGoodsDto> datas = searchService.searchGoodsSolrClient(companyId);
 			br.setContent(datas);
 			br.setStatus(BaseResult.SUCCESS);
 		} catch (Exception e) {

@@ -14,11 +14,11 @@ import com.adanac.framework.page.Pager;
 import com.adanac.framework.page.PagerParam;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.common.entity.BootstrapTable;
-import com.adanac.tool.rageon.intf.common.entity.CommonDto;
-import com.adanac.tool.rageon.intf.common.service.CommonService;
-import com.adanac.tool.rageon.intf.demo.entity.DemoDto;
-import com.adanac.tool.rageon.intf.demo.service.DemoService;
+import com.adanac.tool.rageon.common.entity.BootstrapTable;
+import com.adanac.tool.rageon.common.entity.CommonDto;
+import com.adanac.tool.rageon.common.service.CommonService;
+import com.adanac.tool.rageon.demo.entity.DemoDto;
+import com.adanac.tool.rageon.demo.service.DemoService;
 import com.alibaba.fastjson.JSONObject;
 
 import net.sf.json.JSONArray;

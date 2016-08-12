@@ -14,17 +14,32 @@ import java.util.Properties;
  */
 public class PropertiesUtils {
 
-	public static void main(String[] args) {
-		String filePath = "conf/config.properties";
-		Properties readProperties;
+	public static void main(String[] args) throws Exception {
+		String path = PropertiesUtils.class.getClassLoader().getResource("").toURI().getPath();
+		String filePath = path + "conf/config.properties";
 		try {
-			readProperties = readProperties(filePath);
-			System.out.println(readProperties.getProperty("baiDU_apiKey"));
-		} catch (FileNotFoundException e) {
+			String key = "configKey";
+			System.out.println(getPropertyValue(filePath, key));
+		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 获取指定key的value
+	 * @param filePath
+	 * @param key
+	 * @return
+	 */
+	public static String getPropertyValue(String filePath, String key) {
+		String property = "";
+		try {
+			Properties properties = readProperties(filePath);
+			property = properties.getProperty(key);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return property;
 	}
 
 	/**

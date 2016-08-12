@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.file.craw.CrawService;
+import com.adanac.tool.rageon.file.craw.CrawService;
 
 @Controller
 @RequestMapping(value = "file", produces = "application/json;charset=UTF-8")

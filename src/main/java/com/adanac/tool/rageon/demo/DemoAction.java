@@ -13,8 +13,8 @@ import com.adanac.framework.page.PagerParam;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
 import com.adanac.tool.rageon.constant.RageonConstant;
-import com.adanac.tool.rageon.intf.demo.entity.DemoDto;
-import com.adanac.tool.rageon.intf.demo.service.DemoService;
+import com.adanac.tool.rageon.demo.entity.DemoDto;
+import com.adanac.tool.rageon.demo.service.DemoService;
 
 @Controller
 @RequestMapping(value = "demo", produces = "application/json;charset=UTF-8")

@@ -17,13 +17,9 @@ public class SfuncAction extends BaseAction {
 		return "sfunc/card.ftl";
 	}
 
-	@RequestMapping("toExportIn")
+	@RequestMapping("toExport")
 	public String toExportIn(HttpServletRequest request, ModelMap model) {
 		return "sfunc/excel/exportIn.ftl";
 	}
 
-	@RequestMapping("toExportOut")
-	public String toExportOut(HttpServletRequest request, ModelMap model) {
-		return "sfunc/excel/exportOut.ftl";
-	}
 }

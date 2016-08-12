@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.common.BaseAction;
-import com.adanac.tool.rageon.intf.sfunc.intf.IdCardService;
+import com.adanac.tool.rageon.sfunc.intf.IdCardService;
 import com.alibaba.fastjson.JSONObject;
 
 /**
